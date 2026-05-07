@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Prata&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== FLIPKART DESIGN SYSTEM ===== */
+:root {
+  --primary: #212121;       /* text */
+  --blue: #2874f0;          /* Flipkart blue */
+  --yellow: #ff9f00;        /* Flipkart yellow */
+  --bg: #f1f3f6;            /* background */
+  --border: #e0e0e0;
+}
+
+/* ===== GLOBAL ===== */
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+  background-color: var(--bg);
+  color: var(--primary);
+}
+
+/* ===== HEADINGS ===== */
+h1, h2, h3 {
+  font-weight: 500;
+}
+
+/* ===== LINKS ===== */
+a {
+  transition: all 0.2s ease;
+}
+
+/* Active link */
+a.active hr {
+  display: block;
+  background: var(--yellow);
+}
+
+/* Mobile active */
+@media (max-width:640px) {
+  a.active {
+    background-color: var(--blue);
+    color: white;
+  }
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cfcfcf;
+  border-radius: 10px;
+}
+
+/* ===== COMPONENT CLASSES ===== */
+
+/* Primary Button (Flipkart Blue) */
+.btn-primary {
+  @apply bg-[#2874f0] text-white px-5 py-2 rounded hover:bg-blue-700 transition;
+}
+
+/* Accent Button (Flipkart Yellow) */
+.btn-accent {
+  @apply bg-[#ff9f00] text-white px-5 py-2 rounded hover:bg-orange-500 transition;
+}
+
+/* Card */
+.card {
+  @apply bg-white rounded shadow-sm hover:shadow-md transition;
+}
+
+/* Section */
+.section {
+  @apply py-8;
+}
+
+/* Title font */
+.prata-regular {
+  font-family: "Prata", serif;
+}
+
+/* Hover scale */
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+.hover-scale:hover {
+  transform: scale(1.03);
+}
